@@ -2,7 +2,7 @@
 /**
  * print_deci - print decimal value.
  * @args : arguments.
- * Return : characters printed.
+ * Return: characters printed.
  */
 int print_deci(va_list args)
 {
@@ -38,6 +38,6 @@ int print_deci(va_list args)
 			i++;
 		}
 	}
-        _putchar(last + '0');
+	_putchar(last + '0');
 	return (i);
 }
