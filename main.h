@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 int putchar(char c);
-
+int _printf(const char *format, ...);
+int print_char(va_list arg);
 
 #endif

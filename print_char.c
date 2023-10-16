@@ -3,6 +3,14 @@
 /**
  * print_char - function that prints char to stdout
  * @arg: arguments passed to it
- * Return 1
+ * @val - variable argument
+ * Return: 1
  */
+int print_char(va_list arg)
+{
+	char str;
 
+	str = va_lis(arg, int);
+	_putchar(str);
+	return (1);
+}
