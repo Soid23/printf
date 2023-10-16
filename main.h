@@ -10,5 +10,6 @@ int _printf(const char *format, ...);
 int print_char(va_list arg);
 int print_str(char *str);
 int print_string(va_list val);
+int print_per(void);
 
 #endif
