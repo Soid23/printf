@@ -3,7 +3,7 @@
 /**
  * print_bin - changes to binary.
  * @val : argument.
- * Return: 1
+ * Return: integer.
  */
 int print_bin(va_list val)
 {
@@ -22,14 +22,14 @@ int print_bin(va_list val)
 		{
 			b = d >> (31 - i);
 			_putchar(b + 48);
-			count++;
+			cont++;
 		}
 
 	}
-	if (count == 0)
+	if (cont == 0)
 	{
-		count++;
+		cont++;
 		_putchar('0');
 	}
-	return (count);
+	return (cont);
 }
