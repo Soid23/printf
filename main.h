@@ -35,7 +35,8 @@ int print_int(va_list args);
 int print_hex(va_list val);
 int print_hexa(va_list val);
 int print_HEX(unsigned int num);
-int print_pointer(va_list val);
+int print_pointer(va_list arg);
+int print_hex_c(va_list arg);
 int get_size(const char *format, int *i);
 int handle_format(const char *format, va_list args);
 
