@@ -7,6 +7,12 @@
 #include <unistd.h>
 #include <limits.h>
 
+/**
+ * struct format - specify print functions
+ * @sym: pointer to specifier
+ * @f: pointer to function
+ */
+
 typedef struct format
 {
 	char *sym;
