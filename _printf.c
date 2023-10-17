@@ -10,8 +10,8 @@ int _printf(const char *format, ...)
 {
 	select_match match[] = {
 		{"%s", print_string}, {"%c", print_char},
-		{"%%", print_per}, {"%d", print_decimal},
-		{"%i", print_int}, {"%b", print_binary},
+		{"%%", print_per}, {"%d", print_din},
+		{"%i", print_int}, {"%b", print_bin},
 		{"%u", print_unsigned_int}, {"%o", print_oct},
 		{"%x", print_hexa}, {"%X", print_hex},
 		{"%S", print_str}, {"%p", print_pointer},
@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 	int len = 0;
 
 	va_start(ap, format);
+
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	while (format[a] != '\0')
