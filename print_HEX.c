@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_hexa - a function that converts digits to octal
+ * print_HEX - a function that converts digits to octal
  * @num: arguments passed to the function
  * Return: count
  */
 
-int print_hexa(unsigned int num)
+int print_HEX(unsigned int num)
 {
 	int b, count = 0;
 	int *arr;
