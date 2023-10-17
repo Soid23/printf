@@ -13,11 +13,11 @@
  * @f: pointer to function
  */
 
-typedef struct format
+typedef struct mate
 {
 	char *sym;
 	int (*f)();
-} mate;
+} check mate;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
@@ -36,5 +36,7 @@ int print_hex(va_list val);
 int print_hexa(va_list val);
 int print_HEX(unsigned int num);
 int print_pointer(va_list val);
+int get_size(const char *format, int *i);
+int handle_format(const char *format, va_list args);
 
 #endif
