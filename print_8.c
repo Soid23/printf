@@ -7,13 +7,6 @@
  * Return: count
  */
 
-=======
-/**
- * print_8 - print octal numbers
- * @arg: argument passed
- * Return: count
- */
->>>>>>> 50525e180249841944fee5029cd86f4e4598d675
 int print_8(va_list val)
 {
 	int b;
@@ -30,8 +23,6 @@ int print_8(va_list val)
 		count++;
 	}
 	count++;
-
-<<<<<<< HEAD
 	arr = malloc(sizeof(int) * count);
 	if (arr == NULL)
 		return (NULL);
@@ -44,7 +35,5 @@ int print_8(va_list val)
 		_putchar(arr[b] + '0');
 	free(arr);
 	return (count);
-=======
-	while (num / 8 != 0)
 }
->>>>>>> 50525e180249841944fee5029cd86f4e4598d675
+
