@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 		{"%i", print_int}, {"%b", print_binary},
 		{"%u", print_32int}, {"%o", print_8},
 		{"%x", print_hexa}, {"%X", print_hex},
-		{"%S", str_exe}, {"%p", print_pointer},
+		{"%S", print_str_ex}, {"%p", print_pointer},
 		{"%r", print_rev}, {"%R", print_rot}
 	};
 	va_list args;

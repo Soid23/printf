@@ -41,5 +41,6 @@ int get_size(const char *format, int *i);
 int handle_format(const char *format, va_list args);
 int print_rev(va_list args);
 int print_str_ex(va_list arg);
+int print_rot(va_list arg);
 
 #endif
