@@ -1,5 +1,4 @@
 #include "main.h"
-<<<<<<< HEAD
 
 /**
  * print_8 - a function that converts digits to octal
