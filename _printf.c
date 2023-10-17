@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 		{"%i", print_int}, {"%b", print_binary},
 		{"%u", print_32int}, {"%o", print_8},
 		{"%x", print_hexa}, {"%X", print_hex},
-		{"%S", print_S}, {"%p", print_pointer},
+		{"%S", str_exe}, {"%p", print_pointer},
 		{"%r", print_rev}, {"%R", print_rot}
 	};
 	va_list args;
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		{
 			if (mate[b].sym[0] == format[a] && mate[b].sym[1] == format[a + 1])
 			{
-				len = len + mate[b].f(args);
+				len = len + mate[b].func(args);
 				a = a + 2;
 				break;
 			}
