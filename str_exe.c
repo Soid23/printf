@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 /**
  *  print_string_ex - print exclusuives string.
  *  @arg: argumen

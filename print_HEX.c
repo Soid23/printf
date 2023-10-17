@@ -19,8 +19,6 @@ int print_HEX(unsigned int num)
 	}
 	count++;
 	arr = malloc(sizeof(int) * count);
-	if (arr == NULL)
-		return (NULL);
 	for (b = 0; b < count; b++)
 	{
 		arr[b] = new % 16;

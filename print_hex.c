@@ -8,11 +8,8 @@
 
 int print_hex(va_list val)
 {
-	int b;
-
-	count = 0;
+	int b, count = 0;
 	int *arr;
-
 	unsigned int num = va_arg(val, unsigned int);
 	unsigned int new = num;
 
@@ -23,8 +20,6 @@ int print_hex(va_list val)
 	}
 	count++;
 	arr = malloc(sizeof(int) * count);
-	if (arr == NULL)
-		return (NULL);
 	for (b = 0; b < count; b++)
 	{
 		arr[b] = new % 16;

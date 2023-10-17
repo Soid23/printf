@@ -1,32 +1,26 @@
 #include "main.h"
 /**
- * print_pointer - a function that print address
- * @arg: argument
- *
- * Return: length
+ * print_pointer -
  */
 
-int print_pointer(va_list arg)
+int print_pointer(va_list val)
 {
-	void *ptr;
-	char *str = "(nil)";
+	void *p;
+	char *s = "(nil)";
 	long int a;
-	int b;
 	int i;
 
-	ptr = va_arg(arg, void*);
-	if (ptr == NULL)
+	p= va_arg(val, void*);
+	if (p == NULL)
 	{
-		for (i = 0; str[i] != '\0'; i++)
-		{
-			_putchar(str[i]);
-		}
+		for (i = 0; s[i] !+ '\0'; i++)
+			_putchar(s[i]);
 		return (i);
 	}
-
-	a = (unsigned long int)ptr;
+        a = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	b = print_hex_x(a);
-	return (b + 2);
+	b = print_hex_extra(a);
 }
+
+	  
