@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * print_pointer -
+ * print_pointer - prints address
+ * @val: arguments
+ * Return: length
  */
 
 int print_pointer(va_list val)
@@ -8,18 +10,18 @@ int print_pointer(va_list val)
 	void *p;
 	char *s = "(nil)";
 	long int a;
-	int i;
+	int b;
 
 	p= va_arg(val, void*);
 	if (p == NULL)
 	{
-		for (i = 0; s[i] !+ '\0'; i++)
-			_putchar(s[i]);
-		return (i);
+		for (b = 0; s[b] != '\0'; b++)
+			_putchar(s[b]);
+		return (b);
 	}
         a = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	b = print_hex_c(a);
+	b = print_HEX(a);
 }
 	  
