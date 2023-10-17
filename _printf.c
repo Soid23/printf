@@ -1,32 +1,50 @@
 #include "main.h"
 
 /**
- * _printf - selects the right format to print
- * @format: the output format
- * Return: counter
+ * _printf - to select the right format to print
+ * @format: the identifier
+ * Return: length
  */
-
 int _printf(const char *format, ...)
 {
-	int a = 0;
-	int counter = 0;
-	va_list ap;
+	check mate[] = {
+		{"%s", print_string}, {"%c", print_char},
+		{"%%", print_per}, {"%d", print_decimal},
+		{"%i", print_int}, {"%b", print_binary},
+		{"%u", print_32int}, {"%o", print_8},
+		{"%x", print_hexa}, {"%X", print_hex},
+		{"%S", print_str}, {"%p", print_pointer},
+		{"%r", print_rev}, {"%R", print_rot}
+	};
+	va_list args;
+	int a = 0, b;
+	int len = 0;
 
-	va_start(ap, format);
-	while (format && format[a])
+	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+	while (format[a] != '\0')
 	{
-		if (format[a] == '%')
+		b = 13;
+		while (b >= 0)
 		{
-			a++;
-			counter += handle_format(format + a, ap);
+			if (mate[b].sym[0] == format[a] && mate[b].sym[1] == format[a + 1])
+			{
+				len = len + mate[b].f(args);
+				a = a + 2;
+				break;
+			}
+			b--;
 		}
-		else
+		if (b < 0)
 		{
 			_putchar(format[a]);
-			counter++;
+			len++;
+			a++;
 		}
-		a++;
+		else if (format[a] == '\0')
+			break;
 	}
-	va_end(ap);
-	return (counter);
+	va_end(args);
+	return (len);
 }
