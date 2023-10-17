@@ -28,7 +28,7 @@ int print_string_ex(va_list arg)
 				_putchar('0');
 				len++;
 			}
-			len = len + print_hex_x(cast);
+			len = len + print_hex_c(cast);
 		}
 		else
 		{
