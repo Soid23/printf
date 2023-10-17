@@ -17,7 +17,7 @@ typedef struct mate
 {
 	char *sym;
 	int (*f)();
-} check_mate;
+} check mate;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
