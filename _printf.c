@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	check mate[] = {
 		{"%s", print_string}, {"%c", print_char},
 		{"%%", print_per}, {"%d", print_decimal},
-		{"%i", print_int}, {"%b", print_bin},
+		{"%i", print_int}, {"%b", print_binary},
 		{"%u", print_32int}, {"%o", print_8},
 		{"%x", print_hexa}, {"%X", print_hex},
 		{"%S", print_str}, {"%p", print_pointer},
@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 		b = 13;
 		while (b >= 0)
 		{
-			if (rpmate[b].sym[0] == format[a] && rpmate[b].sym[1] == format[a + 1])
+			if (mate[b].sym[0] == format[a] && mate[b].sym[1] == format[a + 1])
 			{
 				len = len + mate[b].f(args);
 				a = a + 2;

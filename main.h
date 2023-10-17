@@ -30,6 +30,6 @@ int _strlenc(const char *str);
 int print_decimal(va_list args);
 int print_8(va_list val);
 int print_32int(va_list args);
-int print_bin(va_list val);
+int print_binary(va_list val);
 
 #endif
