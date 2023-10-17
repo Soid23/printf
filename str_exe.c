@@ -1,40 +1,40 @@
 #include "main.h"
 /**
- *  print_string_ex - print exclusuives string.
+ *  print_str_ex - print exclusuives string.
  *  @arg: argumen
  *  Return: the length of the string
  */
 
 
-int print_string_ex(va_list arg)
+int print_str_ex(va_list arg)
 {
-	char *str;
-	int i, len = 0;
-	int cast;
+	char *s;
+	int j, length = 0;
+	int mate;
 
-	str = va_arg(arg, char *);
-	if (str == NULL)
-		str = "(null)";
-	for (i = 0; str[i] != '\0'; i++)
+	s = va_arg(arg, char *);
+	if (s == NULL)
+		s = "(null)";
+	for (j = 0; s[j] != '\0'; j++)
 	{
-		if (str[i] < 32 || str[i] >= 127)
+		if (s[j] < 32 || s[j] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
-			len = len + 2;
-			cast = str[i];
-			if (cast < 16)
+			length = len + 2;
+			mate = s[j];
+			if (mate < 16)
 			{
 				_putchar('0');
-				len++;
+				length++;
 			}
-			len = len + print_hex_c(cast);
+			length = length + print_HEX_c(mate);
 		}
 		else
 		{
-			_putchar(str[i]);
-			len++;
+			_putchar(str[j]);
+			length++;
 		}
 	}
-	return (len);
+	return (length);
 }

@@ -8,7 +8,7 @@
 #include <limits.h>
 
 /**
- * struct format - specify print functions
+ * struct mate - specify print functions
  * @sym: pointer to specifier
  * @f: pointer to function
  */
@@ -39,5 +39,7 @@ int print_pointer(va_list arg);
 int print_hex_c(va_list arg);
 int get_size(const char *format, int *i);
 int handle_format(const char *format, va_list args);
+int print_rev(va_list args);
+int print_str_ex(va_list arg);
 
 #endif
