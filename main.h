@@ -4,6 +4,14 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <limits.h>
+
+typedef struct format
+{
+	char *sym;
+	int (*f)();
+} mate;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
