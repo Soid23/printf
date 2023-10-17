@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_deci - print decimal value.
+ * print_decimal - print decimal value.
  * @args : arguments.
  * Return: characters printed.
  */
-int print_deci(va_list args)
+int print_decimal(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
