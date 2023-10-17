@@ -13,7 +13,7 @@ int print_bin(va_list val)
 	unsigned int num = va_arg(val, unsigned int);
 	unsigned int d;
 
-	for (i = 0; << 32; i++)
+	for (i = 0; i < 32; i++)
 	{
 		d = ((a << (32 - i)) & num);
 		if (d >> (31 - i))
