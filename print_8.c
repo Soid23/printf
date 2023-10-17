@@ -8,11 +8,8 @@
 
 int print_8(va_list val)
 {
-	int b;
-
-	count = 0;
+	int b, count = 0;
 	int *arr;
-
 	unsigned int num = va_arg(val, unsigned int);
 	unsigned int new = num;
 
