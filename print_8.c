@@ -13,19 +13,19 @@ int print_8(va_list val)
 	count = 0;
 	int *arr;
 
-	unsigned int new = clip;
-	unsigned int clip = va_arg(val, unsigned int);
+	unsigned int new = num;
+	unsigned int num = va_arg(val, unsigned int);
 
-	while (clip / 8 != 0)
+	while (num / 8 != 0)
 	{
-		clip = clip / 8;
+		num = num / 8;
 		count++;
 	}
 	count++;
 	arr = malloc(sizeof(int) * count);
 	if (arr == NULL)
 		return (NULL);
-	for (b = 0; b < counter; b++)
+	for (b = 0; b < count; b++)
 	{
 		arr[b] = new % 8;
 		new = new / 8;
