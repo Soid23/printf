@@ -7,7 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
-	check mate[] = {
+	check_mate mate[] = {
 		{"%s", print_string}, {"%c", print_char},
 		{"%%", print_per}, {"%d", print_decimal},
 		{"%i", print_int}, {"%b", print_binary},
