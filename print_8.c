@@ -13,8 +13,8 @@ int print_8(va_list val)
 	count = 0;
 	int *arr;
 
-	unsigned int new = num;
 	unsigned int num = va_arg(val, unsigned int);
+	unsigned int new = num;
 
 	while (num / 8 != 0)
 	{
