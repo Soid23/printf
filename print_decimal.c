@@ -6,38 +6,38 @@
  */
 int print_decimal(va_list args)
 {
-	int n = va_arg(args, int);
-	int num, last = n % 10, digit, exp = 1;
-	int i = 1;
+	int t = va_arg(args, int);
+	int numb, last = t % 10, digit, exp = 1;
+	int a = 1;
 
-	n = n / 10;
-	num = n;
+	t = t / 10;
+	numb = t;
 
 	if (last < 0)
 	{
 		_putchar('_');
-		num = -num;
-		n = -n;
+		numb = -numb;
+		t = -t;
 		last = -last;
-		i++;
+		a++;
 	}
-	if (num > 0)
+	if (numb > 0)
 	{
-		while (num / 10 != 0)
+		while (numb / 10 != 0)
 		{
 			exp = exp * 10;
-			num = num / 10;
+			numb = numb / 10;
 		}
-		num = n;
+		numb = t;
 		while (exp > 0)
 		{
-			digit = num / exp;
+			digit = numb / exp;
 			_putchar(digit + '0');
-			num = num - (digit = exp);
+			numb = numb - (digit = exp);
 			exp = exp / 10;
-			i++;
+			a++;
 		}
 	}
 	_putchar(last + '0');
-	return (i);
+	return (a);
 }
