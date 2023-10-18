@@ -27,6 +27,6 @@ int print_pointer(va_list arg)
 	a = (unsigned long int)ptr;
 	_putchar('0');
 	_putchar('x');
-	b = print_hex_x(a);
+	b = print_hex_c(a);
 	return (b + 2);
 }
