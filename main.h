@@ -10,13 +10,13 @@
 /**
  * struct mate - specify print functions
  * @sym: pointer to specifier
- * @f: pointer to function
+ * @func: pointer to function
  */
 
 typedef struct mate
 {
 	char *sym;
-	int (*f)();
+	int (*func)();
 } check_mate;
 
 int _putchar(char c);
@@ -41,5 +41,6 @@ int get_size(const char *format, int *i);
 int handle_format(const char *format, va_list args);
 int print_rev(va_list args);
 int print_str_ex(va_list arg);
+int print_rot(va_list arg);
 
 #endif

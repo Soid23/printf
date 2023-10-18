@@ -21,18 +21,18 @@ int print_str_ex(va_list arg)
 		{
 			_putchar('\\');
 			_putchar('x');
-			length = len + 2;
+			length = length + 2;
 			mate = s[j];
 			if (mate < 16)
 			{
 				_putchar('0');
 				length++;
 			}
-			length = length + print_HEX_c(mate);
+			length = length + print_HEX(mate);
 		}
 		else
 		{
-			_putchar(str[j]);
+			_putchar(s[j]);
 			length++;
 		}
 	}
