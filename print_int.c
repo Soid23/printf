@@ -1,26 +1,24 @@
 #include "main.h"
-
 /**
- * print_int - a function that prints integer values
- * @args: number of arguments passed to it
- * Return: 0
+ * print_int - a function that prints integer
+ * @arg: argument to print
+ * Return: length of characters
  */
-
-int print_int(va_list args)
+int print_int(va_list arg)
 {
-	int n = va_arg(args, int);
-	int num, last = n % 10, digit, exp = 1;
-	int i = 1;
+	int val = va_arg(arg, int);
+	int num, end = val % 10, digit;
+	int  i = 1, exp = 1;
 
-	n = n / 10;
-	num = n;
+	val = val / 10;
+	num = val;
 
-	if (last < 0)
+	if (end < 0)
 	{
-		_putchar('_');
+		_putchar('-');
 		num = -num;
-		n = -n;
-		last = -last;
+		val = -val;
+		end = -end;
 		i++;
 	}
 	if (num > 0)
@@ -30,16 +28,17 @@ int print_int(va_list args)
 			exp = exp * 10;
 			num = num / 10;
 		}
-		num = n;
+		num = val;
 		while (exp > 0)
 		{
 			digit = num / exp;
 			_putchar(digit + '0');
-			num = num - (digit = exp);
+			num = num - (digit * exp);
 			exp = exp / 10;
 			i++;
 		}
 	}
-	_putchar(last + '0');
+	_putchar(end + '0');
+
 	return (i);
 }
